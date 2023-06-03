@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use App\Models\Kategori;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
 {
 	public function index()
 	{
-		$barang = Barang::get();
+		$barang = Barang::latest()->paginate(2);
 
 		return view('barang.index', ['data' => $barang]);
 	}

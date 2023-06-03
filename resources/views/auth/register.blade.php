@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>SB Admin 2 - Register</title>
+  <title>Register Account</title>
 
   <!-- Custom fonts for this template-->
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -36,6 +36,12 @@
               </div>
               <form action="{{ route('register.simpan') }}" method="POST" class="user">
                 @csrf
+                <div class="form-group">
+                  <input name="nik" type="text" class="form-control form-control-user @error('nik')is-invalid @enderror" id="nik" placeholder="Nik">
+                  @error('nik')
+                    <span class="invalid-feedback">{{ $message }}</span>
+                  @enderror
+                </div>
                 <div class="form-group">
                   <input name="nama" type="text" class="form-control form-control-user @error('nama')is-invalid @enderror" id="exampleInputName" placeholder="Name">
                   @error('nama')

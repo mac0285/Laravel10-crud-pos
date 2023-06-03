@@ -26,8 +26,12 @@ Route::controller(AuthController::class)->group(function () {
 	Route::get('logout', 'logout')->middleware('auth')->name('logout');
 });
 
+//Route::get('/', function () {
+//	return view('welcome');
+//});
+
 Route::get('/', function () {
-	return view('welcome');
+    return view('Auth.login');
 });
 
 Route::middleware('auth')->group(function () {

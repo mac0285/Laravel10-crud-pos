@@ -19,16 +19,25 @@ class AuthController extends Controller
 	public function registerSimpan(Request $request)
 	{
 		Validator::make($request->all(), [
+			'nik' => 'required | min:5',
 			'nama' => 'required',
 			'email' => 'required|email',
 			'password' => 'required|confirmed'
 		])->validate();
 
 		User::create([
-			'nama' => $request->nama,
+			'nik'=> $request->nik,
+			'dept_id' => '1',
+			'brach_id' => '0',
+			'name' => $request->nama,
 			'email' => $request->email,
 			'password' => Hash::make($request->password),
-			'level' => 'Admin'
+			'password2' => Hash::make($request->nama),
+			'password3' =>$request->password,
+			'team_id' => '1',
+			'role' => '1',
+			'level' => 'Admin',
+			'active' => '1'
 		]);
 
 		return redirect()->route('login');

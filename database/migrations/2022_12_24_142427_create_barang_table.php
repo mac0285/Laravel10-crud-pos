@@ -15,11 +15,19 @@ return new class extends Migration
 	{
 		Schema::create('barang', function (Blueprint $table) {
 			$table->id();
-			$table->string('kode_barang')->nullable();
+			$table->string('plu')->nullable();
 			$table->string('nama_barang')->nullable();
 			$table->string('kategori_barang')->nullable();
-			$table->string('harga')->nullable();
-			$table->integer('jumlah')->nullable();
+			$table->integer('prices')->nullable();
+			$table->integer('margin')->nullable();
+			$table->integer('ppn')->nullable();
+			$table->integer('qty')->nullable();
+			$table->integer('tot_prices')->nullable();
+			$table->string('sup1')->nullable();
+			$table->string('sup2')->nullable();
+			$table->string('sup3')->nullable();
+			$table->string('update_by')->nullable();
+			$table->integer('active')->nullable();
 			$table->timestamps();
 		});
 	}

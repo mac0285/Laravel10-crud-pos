@@ -23,12 +23,52 @@
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Barang</span></a>
   </li>
+  <!--
+
+dddddddddddddddddddddddddddddddddddddddddddddddd
+
+
+  -->  
+  <ul class="nav flex-column" id="nav_accordion">
+    <li class="nav-item">
+      <a class="nav-link" href="#"> Link name </a>
+    </li>
+    <li class="nav-item has-submenu">
+      <a class="nav-link" href="#"> Submenu links  </a>
+      <ul class="submenu collapse">
+        <li><a class="nav-link" href="#">Submenu item 1 </a></li>
+        <li><a class="nav-link" href="#">Submenu item 2 </a></li>
+        <li><a class="nav-link" href="#">Submenu item 3 </a> </li>
+      </ul>
+    </li>
+    <li class="nav-item has-submenu">
+      <a class="nav-link" href="#"> More menus  </a>
+      <ul class="submenu collapse">
+        <li><a class="nav-link" href="#">Submenu item 4 </a></li>
+        <li><a class="nav-link" href="#">Submenu item 5 </a></li>
+        <li><a class="nav-link" href="#">Submenu item 6 </a></li>
+        <li><a class="nav-link" href="#">Submenu item 7 </a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"> Something </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#"> Other link </a>
+    </li>
+  </ul>
 
 	@if (auth()->user()->level == 'Admin')
   <li class="nav-item">
     <a class="nav-link" href="{{ route('kategori') }}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
-      <span>Kategori</span></a>
+      <span>Categories</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{{ route('kategori') }}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>User</span></a>
   </li>
 	@endif
 

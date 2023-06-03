@@ -11,7 +11,19 @@ class Barang extends Model
 
 	protected $table = 'barang';
 
-	protected $fillable = ['kode_barang', 'nama_barang', 'id_kategori', 'harga', 'jumlah'];
+	protected $fillable = ['plu',
+							'nama_barang',
+							'kategori_barang',
+							'prices',
+							'margin',
+							'ppn',
+							'qty',
+							'tot_prices',
+							'sup1',
+							'sup2',
+							'sup3',
+							'update_by',
+							'active'];
 
 	public function kategori()
 	{

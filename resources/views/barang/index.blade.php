@@ -46,6 +46,11 @@
             @endforeach
           </tbody>
         </table>
+
+        <div class="d-flex">
+          {!! $data->links() !!}
+      </div>
+
       </div>
     </div>
   </div>

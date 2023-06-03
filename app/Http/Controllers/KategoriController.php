@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
 {
 	public function index()
 	{
-		$kategori = Kategori::get();
+		$kategori = Kategori::latest()->paginate(2);
 
 		return view('kategori/index', ['kategori' => $kategori]);
 	}
